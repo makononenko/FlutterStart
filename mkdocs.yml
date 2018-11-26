@@ -1,0 +1,19 @@
+site_name: Flutter Development in IntelliJ IDEA
+nav:
+- 'Getting Started':
+    - 'Introduction': 'index.md'
+    - 'install.md'
+- 'Develop a Flutter Application':
+    - 'Create a Flutter Application': 'create_app.md'
+    - 'run_app.md'
+    - 'hot_reload.md'
+- 'Flutter Plugin Tools':
+    - 'Overview': 'flutter_tools.md'
+    - 'Dart Analysis': 'dart_analysis.md'
+    - 'flutter_doctor.md'
+    - 'Flutter Inspector': 'flutter_inspector.md'
+    - 'flutter_outline.md'
+    - 'Life Templates': 'life_templates.md'
+
+theme: material
+
