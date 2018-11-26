@@ -1,0 +1,882 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Create a Flutter Application - Flutter Development in IntelliJ IDEA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#create-a-flutter-application" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Flutter Development in IntelliJ IDEA" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Flutter Development in IntelliJ IDEA
+              </span>
+              <span class="md-header-nav__topic">
+                Create a Flutter Application
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Flutter Development in IntelliJ IDEA" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Flutter Development in IntelliJ IDEA
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install/" title="Install the Flutter and Dart Plugins" class="md-nav__link">
+      Install the Flutter and Dart Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Develop a Flutter Application
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Develop a Flutter Application
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Create a Flutter Application
+      </label>
+    
+    <a href="./" title="Create a Flutter Application" class="md-nav__link md-nav__link--active">
+      Create a Flutter Application
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-a-flutter-project" title="Step 1. Create a Flutter project" class="md-nav__link">
+    Step 1. Create a Flutter project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-import-packages" title="Step 2. Import packages" class="md-nav__link">
+    Step 2. Import packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-add-a-stateless-widget" title="Step 3. Add a stateless widget" class="md-nav__link">
+    Step 3. Add a stateless widget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-add-a-stateful-widget" title="Step 4. Add a stateful widget" class="md-nav__link">
+    Step 4. Add a stateful widget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-change-the-widgets-state" title="Step 5. Change the widgets state" class="md-nav__link">
+    Step 5. Change the widgets state
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" title="Source code" class="md-nav__link">
+    Source code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" title="Tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../run_app/" title="Run a Flutter Application" class="md-nav__link">
+      Run a Flutter Application
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hot_reload/" title="Hot Reload" class="md-nav__link">
+      Hot Reload
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Flutter Plugin Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Flutter Plugin Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flutter_tools/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dart_analysis/" title="Dart Analysis" class="md-nav__link">
+      Dart Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flutter_doctor/" title="Flutter Doctor" class="md-nav__link">
+      Flutter Doctor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flutter_inspector/" title="Flutter Inspector" class="md-nav__link">
+      Flutter Inspector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flutter_outline/" title="Flutter Outline" class="md-nav__link">
+      Flutter Outline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../life_templates/" title="Life Templates" class="md-nav__link">
+      Life Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-a-flutter-project" title="Step 1. Create a Flutter project" class="md-nav__link">
+    Step 1. Create a Flutter project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-import-packages" title="Step 2. Import packages" class="md-nav__link">
+    Step 2. Import packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-add-a-stateless-widget" title="Step 3. Add a stateless widget" class="md-nav__link">
+    Step 3. Add a stateless widget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-add-a-stateful-widget" title="Step 4. Add a stateful widget" class="md-nav__link">
+    Step 4. Add a stateful widget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-change-the-widgets-state" title="Step 5. Change the widgets state" class="md-nav__link">
+    Step 5. Change the widgets state
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" title="Source code" class="md-nav__link">
+    Source code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" title="Tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="create-a-flutter-application">Create a Flutter Application</h1>
+<p>We will create a simple Flutter application, which will randomly change its interface color on tapping a button.</p>
+<h2 id="step-1-create-a-flutter-project">Step 1. Create a Flutter project</h2>
+<p>To create a Flutter project,</p>
+<ol>
+<li>Run IntelliJ IDEA.</li>
+<li>In the welcome window, click <strong>Create New Project</strong> or select <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Project</strong> from the IDE main window.</li>
+<li>
+<p>Select <strong>Flutter</strong> from the left pane of the opened window.</p>
+<blockquote>
+<p>The <strong>Flutter</strong> section is available only if the Flutter plugin has been <a href="../install/">installed</a> for the IDE.</p>
+</blockquote>
+</li>
+<li>
+<p>Click <strong>Install SDK</strong> and select a folder to store the Flutter SDK files.</p>
+<blockquote>
+<p>Alternatively, you can install the SDK from the official Flutter <a href="https://flutter.io/docs/get-started/install">website</a>.</p>
+</blockquote>
+<p>After the SDK is installed, click <strong>Next</strong>.
+5. Specify the project name.</p>
+<blockquote>
+<p>The project name should be in lower case and cannot contain spaces and any special character but underscores.</p>
+</blockquote>
+<p>On the same page, you may also change the path to your application and specify the organisation name if a project is going to be published. You may also select a programming language, which will be used in Android and iOS modules of the project. For our first app, we will leave the default settings.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong> and wait until the project is created.</p>
+</li>
+<li><a href="../run_app/">Run</a> the demo application that has been created by default in the <strong>lib/main.dart</strong> file. Try to use the <a href="../hot_reload/">hot reload</a> function with the demo app.</li>
+<li>Delete all content of <strong>lib/main.dart</strong>, so we can add a code of our first app from scratches.</li>
+</ol>
+<h2 id="step-2-import-packages">Step 2. Import packages</h2>
+<p>In our app, we will use Flutter material design widgets from the <a href="https://docs.flutter.io/flutter/material/material-library.html">material</a> library. To use the library, add the following string:</p>
+<pre><code>import 'package:flutter/material.dart';
+</code></pre>
+<p>We also need to import an external package <a href="https://pub.dartlang.org/packages/random_color">random_color</a>, which will be used for random color generation.</p>
+<blockquote>
+<p>Find more usful packages on the <a href="https://pub.dartlang.org/flutter/">Flutter Packages website</a>.</p>
+</blockquote>
+<p>To import an external package,</p>
+<ol>
+<li>Open the <strong>pubsec.yaml</strong> file from the root folder of the project.</li>
+<li>
+<p>Add the package and its version to the dependencies list:</p>
+<pre><code>dependencies:
+flutter:
+ sdk: flutter
+random_color: ^1.0.3
+</code></pre>
+</li>
+<li>
+<p>Pull the package into your project by clicking <strong>Get Packages</strong> from the top right corner of the code editor when <strong>pubsec.yaml</strong> is open, or select <strong>Toos</strong> &gt; <strong>Flutter</strong> &gt; <strong>Packages Get</strong> from the main menu.</p>
+</li>
+<li>Import the package in <strong>main.dart</strong>:<pre><code>import 'package:random_color/random_color.dart'
+</code></pre>
+</li>
+</ol>
+<h2 id="step-3-add-a-stateless-widget">Step 3. Add a stateless widget</h2>
+<p>We will add a subclass of <a href="https://docs.flutter.io/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>. Stateless widgets do not have any state that could be changed by user interactions. This class will be a root of our application.</p>
+<ol>
+<li>
+<p>Type <code>stless</code> to add the <strong>StatelessWidget</strong> class structure from <a href="../life_templates/">life templates</a>. The following class structure will appear:</p>
+<pre><code>  class  extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+    }
+  }
+</code></pre>
+<p>Add the name of the class:</p>
+<pre><code>  class RandomColors extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+    }
+  }
+</code></pre>
+</li>
+<li>
+<p>Every widget provides the <strong>build()</strong> method, which returns lower level widgets. Our <strong>build()</strong> method will return the <a href="https://docs.flutter.io/flutter/material/MaterialApp-class.html">MaterialApp</a> widget, which will serve as a container for material design widgets that we will add later:</p>
+<pre><code>class RandomColorApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Random Color App',
+    );
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Add the <strong>main()</strong> method before the <strong>RandomColorApp</strong> class code and after the import links:</p>
+<pre><code>void main() =&gt; runApp(RandomColorApp());
+</code></pre>
+</li>
+</ol>
+<h2 id="step-4-add-a-stateful-widget">Step 4. Add a stateful widget</h2>
+<p>Unlike a stateless widget, every stateful widget has a state. 
+We will create a subclass of the <a href="https://docs.flutter.io/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> class and its state—sublass of the <a href="https://docs.flutter.io/flutter/widgets/State-class.html">State</a> class.</p>
+<ol>
+<li>
+<p>Type <code>stful</code> to add the <strong>StatefulWidget</strong> class structure from <a href="../life_templates/">life templates</a>. The following class structure will appear:</p>
+<pre><code>class  extends StatefulWidget {
+  @override
+  _State createState() =&gt; _State();
+}
+
+class _State extends State&lt;&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+</code></pre>
+<p>Rename the created classes: </p>
+<pre><code>class RandomColorHomePage extends StatefulWidget {
+  @override
+  State createState() =&gt; RandomColorHomePageState();
+}
+
+class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Add the created <strong>RandomColorHomePage</strong> class as a child widget for the <strong>RandomColorApp</strong> class created in Step 3:</p>
+<pre><code>class RandomColorApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: RandomColorHomePage());
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Add the <strong>setState()</strong> method for the <strong>RandomColorHomePageState</strong> class. This method will generate a random color using external package <strong>random_color</strong> imported in Step 2.</p>
+<pre><code>class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+  Color _currentColor = RandomColor().randomColor();
+
+  @override
+  void setState(fn) {
+    _currentColor = RandomColor().randomColor();
+    super.setState(fn);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>In the <strong>build()</strong> method of the <strong>RandomColorHomePageState</strong> class, add the <a href="https://docs.flutter.io/flutter/material/Scaffold-class.html">Scaffold</a> widget containing <a href="https://docs.flutter.io/flutter/material/AppBar-class.html">AppBar</a>, <a href="https://docs.flutter.io/flutter/widgets/Text-class.html">Text</a> in the center of the screen and <a href="https://docs.flutter.io/flutter/material/FloatingActionButton-class.html">FloatingActionButton</a>:</p>
+<pre><code>class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Random Color'),
+      ),
+      body: Center(
+        child: Text('Current color'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+        tooltip: 'Change color',
+        child: Icon(Icons.colorize),
+      ),
+    );
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><a href="../run_app/">Run</a> the application, or <a href="../hot_reload/">reload</a> it if it is running. The app will look this way:</p>
+<p><img src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/widgets.png" alt="drawing" width="300" style:"margin-bottom:15px"/></p>
+</li>
+</ol>
+<h2 id="step-5-change-the-widgets-state">Step 5. Change the widgets state</h2>
+<p>On tapping the floating button, our app will change the color of its widgets and display the name of the current color in the center of the screen.</p>
+<ol>
+<li>
+<p>To generate the current color value every time when the button is tapped, set the <strong>setState()</strong> method as a value of the <strong>onPressed</strong> property of the <strong>FloatingActionButton</strong> widget:</p>
+<pre><code>  floatingActionButton: FloatingActionButton(
+    onPressed: () {
+     setState(() {});
+  },
+</code></pre>
+</li>
+<li>
+<p>Set the value of the <strong>backgroundColor</strong> property for the <strong>Scaffold</strong>, <strong>AppBar</strong> and <strong>FloatingActionButton</strong> widgets (for <strong>Scaffold</strong>, set the color value with transparency):</p>
+<pre><code> @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: _currentColor.withAlpha(150),
+      appBar: AppBar(
+        title: Text('Random Color'),
+        backgroundColor: _currentColor,
+      ),
+      body: Center(
+        child: Text('Current color'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+        tooltip: 'Change color',
+        child: Icon(Icons.colorize),
+        backgroundColor: _currentColor,
+      ),
+    );
+  }
+</code></pre>
+</li>
+<li>
+<p>Add the current color name under the "Current color" text. To do this, you will need to add a second <strong>Text</strong> widget and wrap both <strong>Text</strong> widgets  with the <a href="https://docs.flutter.io/flutter/widgets/Column-class.html">Column</a> widget. </p>
+<blockquote>
+<p>You can use <a href="../flutter_outline/">Flutter Outline</a> to wrap a widget with column automatically. To do this, select a widget in the <strong>Flutter Outline</strong> window and run the <strong>Wrap with Column</strong> command from toolbar or context menu.</p>
+</blockquote>
+<p>Additionally, format text size and color and center the text vertically by using the <strong>mainAxisAlignment</strong> property of the <strong>Column</strong> widget:</p>
+<pre><code>  body: Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: &lt;Widget&gt;[
+        Text(('Current color'),
+            style: TextStyle(
+              fontSize: 20,
+              color: Color.fromARGB(255, 255, 255, 255),
+            )),
+        Text(
+          (getColorNameFromColor(_currentColor).getName),
+          style: TextStyle(
+            fontSize: 36,
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
+        )
+      ],
+    ),
+  ),
+</code></pre>
+</li>
+<li>
+<p>Reload the application. You will get the following result:</p>
+<p><img src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/result.png" alt="drawing" width="300" style:"margin-bottom:15px"/></p>
+</li>
+</ol>
+<p>Your app interface will have a random color. The widgets color will change on tapping the floating button.</p>
+<h2 id="source-code">Source code</h2>
+<p>You can review the code of the created app here:</p>
+<ul>
+<li><a href="../src/main.dart">main.dart</a></li>
+<li><a href="../src/pubspec.yaml">pubspec.yaml</a></li>
+</ul>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Use the <strong>Reformat Code with dartfmt</strong> command of the code editor context menu to correct the formatting of your code, which may be skewed after pasting code snippets.</li>
+<li>Use the <a href="../dart_analysis/">Dart Analysis</a> window to review the errors which may appear when editing the code.</li>
+<li>Use <a href="../flutter_outline/">Flutter Outline</a> to easily navigate through the widgets tree, change widgets hierarchy, edit widgets layout, etc.</li>
+<li>Use <a href="../flutter_inspector/">Flutter Inspector</a> to explore the widgets hierarchy and debug possible layout issues.</li>
+<li>Find more information on useful Flutter plugin functions in the <a href="../flutter_tools/">Flutter Plugin Tools</a> section.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../install/" title="Install the Flutter and Dart Plugins" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Install the Flutter and Dart Plugins
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../run_app/" title="Run a Flutter Application" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Run a Flutter Application
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.9e1f3b71.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
