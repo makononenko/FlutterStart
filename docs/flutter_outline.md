@@ -10,13 +10,13 @@ tree:
 **Flutter Outline** allows adding different code structures for changing widgets layout. The following commands are available from the **Flutter Outline** toolbar and context menu:
 
 - **Center widget** ![](https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_center.png). Add the [Center](https://docs.flutter.io/flutter/widgets/Center-class.html) widget as a parent element for a selected widget. A child widget will be centered within a parent one.
-- **Add paddings** ![](https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_padding.png). Add the [Padding](https://docs.flutter.io/flutter/widgets/Padding-class.html) widget as a parent element for a selected widget. Change paddig of a child widget by setting the value of the **padding** property.
+- **Add padding** ![](https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_padding.png). Add the [Padding](https://docs.flutter.io/flutter/widgets/Padding-class.html) widget as a parent element for a selected widget. Change padding of a child widget by setting the value of the **padding** property.
 - **Wrap with column** ![](https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_column.png). Add the [Column](https://docs.flutter.io/flutter/widgets/Column-class.html) widget as a parent element for a selected widget. You can add several widgets within a **Column**, and they will be arranged vertically.
 -  **Wrap with row** ![](https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_row.png). Add the [Row](https://docs.flutter.io/flutter/widgets/Row-class.html) widget as a parent element for a selected widget. You can add several widgets within a **Row**, and they will be arranged horizontally.
 - **Wrap with Container** ![](https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_container.png). Add the [Container](https://docs.flutter.io/flutter/widgets/Container-class.html) widget as a parent element for a selected widget.  You can add several widgets within a **Container** and adjust their position.
 
 ###Example
-In this example, we center the **Text** widget, wrap it into a column, add one more child element to the column and change paddings for this element:
+In this example, we center the **Text** widget, wrap it into a column, add one more child element to the column and change padding for this element:
 
 Before:
 
@@ -56,7 +56,6 @@ To do this,
 Before:
 
 	  floatingActionButton: FloatingActionButton(
-	    onPressed: (),
 	    tooltip: 'Add',
 	    child: Icon(Icons.add),
 	  ),
@@ -67,11 +66,10 @@ After:
 	(…)
 		
 	FloatingActionButton buildFloatingActionButton() {
-			return FloatingActionButton(
-	 		onPressed: (),
-		    tooltip: 'Add',
-		    child: Icon(Icons.add),
-			);
+	  return FloatingActionButton(
+		tooltip: 'Add',
+		child: Icon(Icons.add),
+	  );
 	}
 
 	

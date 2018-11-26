@@ -1,5 +1,5 @@
 # Run a Flutter Application
-To run a [created](create_project.md) application,
+To run a [created](create_app.md) application,
 
 1. Select an Android device from the list of target devices in IntelliJ IDEA toolbar. You may use a physical device connected to your computer as well as a virtual one.
 

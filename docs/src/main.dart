@@ -6,16 +6,19 @@ void main() => runApp(RandomColorApp());
 class RandomColorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: RandomColorHomePage());
+    return MaterialApp(
+        title: 'Random Color App',
+        home: RandomColorHomePage()
+    );
   }
 }
 
 class RandomColorHomePage extends StatefulWidget {
   @override
-  State createState() => RandomColorHomePageState();
+  _RandomColorHomePageState createState() => _RandomColorHomePageState();
 }
 
-class RandomColorHomePageState extends State<RandomColorHomePage> {
+class _RandomColorHomePageState extends State<RandomColorHomePage> {
   Color _currentColor = RandomColor().randomColor();
 
   @override

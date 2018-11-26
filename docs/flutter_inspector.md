@@ -14,8 +14,8 @@ For every selected widget, **Flutter Inspector** displays the list of available 
 
 When a widget or a property is selected in **Flutter Inspector**, its code is highlighted in the code editor. You can also go to the source code of the selected widget/property by using the following commands of context menu:
 
-- **Jump to Source**. Go to your implementation of a widget/property. 
-- **Jump to Type**. Go to the source code of a widget/property from a library where it is implemented.
+- **Jump to Source**. Go to the widget/property source code in your application. 
+- **Jump to Type**. Go to the source code of the widget/property type in the library.
 
 ##Debug layout and performance issues
 For debugging widget layout issues, you can use the **Render Tree** tab of **Flutter Inspector**. This view displays more detailed information on how widgets are rendered:
@@ -26,11 +26,11 @@ Switch on the **Debug Paint** mode by clicking ![](https://raw.githubusercontent
 
 <img src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fi_debugPaintSample.png" alt="drawing" width="300" style:"margin-bottom:15px"/>
 
-To examine the application performance, you may use the Performance tab of Flutter Inspector:
+To examine the application performance, you can use the **Performance** tab of **Flutter Inspector**:
 
 <img src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fi_performance.png" alt="drawing" width="300" style:"margin-bottom:15px"/>
 
-Please visit the official Flutter website to get more information on [debugging](https://flutter.io/docs/testing/debugging) and [analyzing performance](https://flutter.io/docs/testing/ui-performance) of Flutter applications.
+Please visit the official Flutter website to get more information on [debugging](https://flutter.io/docs/testing/debugging) and [performance analysis](https://flutter.io/docs/testing/ui-performance) of Flutter applications.
 
 
 
