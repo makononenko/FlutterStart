@@ -1,4 +1,4 @@
 # Navigation
 
 - https://makononenko.github.io/FlutterStart/ - documentation website
-- makononenko/FlutterStart/docs - documentation sources (.md pages)
+- https://github.com/makononenko/FlutterStart - documentation sources (.md pages)
