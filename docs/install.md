@@ -8,7 +8,7 @@ To install the plugins,
 
 1. Click **Browse Repositories** and type "Flutter" in the search field. Find the Flutter plugin and click **Install**:
 
-	<img src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/installFlutter.png" alt="Install plugin" width="500" style:"margin-bottom:15px"/>
+    <img src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/installFlutter.png" alt="Install plugin" width="500" style:"margin-bottom:15px"/>
 
 1. During the Flutter plugin installation you'll receive a message saying that the Dart plugin has to be installed as well. Click **Proceed** to install both plugins.
 2. Restart the IDE after the installation is finished.
