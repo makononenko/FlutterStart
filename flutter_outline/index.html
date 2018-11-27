@@ -526,13 +526,13 @@ tree:</p>
 <p><strong>Flutter Outline</strong> allows adding different code structures for changing widgets layout. The following commands are available from the <strong>Flutter Outline</strong> toolbar and context menu:</p>
 <ul>
 <li><strong>Center widget</strong> <img alt="" src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_center.png" />. Add the <a href="https://docs.flutter.io/flutter/widgets/Center-class.html">Center</a> widget as a parent element for a selected widget. A child widget will be centered within a parent one.</li>
-<li><strong>Add paddings</strong> <img alt="" src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_padding.png" />. Add the <a href="https://docs.flutter.io/flutter/widgets/Padding-class.html">Padding</a> widget as a parent element for a selected widget. Change paddig of a child widget by setting the value of the <strong>padding</strong> property.</li>
+<li><strong>Add padding</strong> <img alt="" src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_padding.png" />. Add the <a href="https://docs.flutter.io/flutter/widgets/Padding-class.html">Padding</a> widget as a parent element for a selected widget. Change padding of a child widget by setting the value of the <strong>padding</strong> property.</li>
 <li><strong>Wrap with column</strong> <img alt="" src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_column.png" />. Add the <a href="https://docs.flutter.io/flutter/widgets/Column-class.html">Column</a> widget as a parent element for a selected widget. You can add several widgets within a <strong>Column</strong>, and they will be arranged vertically.</li>
 <li><strong>Wrap with row</strong> <img alt="" src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_row.png" />. Add the <a href="https://docs.flutter.io/flutter/widgets/Row-class.html">Row</a> widget as a parent element for a selected widget. You can add several widgets within a <strong>Row</strong>, and they will be arranged horizontally.</li>
 <li><strong>Wrap with Container</strong> <img alt="" src="https://raw.githubusercontent.com/makononenko/FlutterStart/master/docs/img/fo_container.png" />. Add the <a href="https://docs.flutter.io/flutter/widgets/Container-class.html">Container</a> widget as a parent element for a selected widget.  You can add several widgets within a <strong>Container</strong> and adjust their position.</li>
 </ul>
 <h3 id="example">Example</h3>
-<p>In this example, we center the <strong>Text</strong> widget, wrap it into a column, add one more child element to the column and change paddings for this element:</p>
+<p>In this example, we center the <strong>Text</strong> widget, wrap it into a column, add one more child element to the column and change padding for this element:</p>
 <p>Before:</p>
 <pre><code>appBar: AppBar(
      title: Text('App name'),
@@ -564,7 +564,6 @@ To do this,</p>
 <h3 id="example_1">Example</h3>
 <p>Before:</p>
 <pre><code>  floatingActionButton: FloatingActionButton(
-    onPressed: (),
     tooltip: 'Add',
     child: Icon(Icons.add),
   ),
@@ -574,11 +573,10 @@ To do this,</p>
 (…)
 
 FloatingActionButton buildFloatingActionButton() {
-        return FloatingActionButton(
-        onPressed: (),
-        tooltip: 'Add',
-        child: Icon(Icons.add),
-        );
+  return FloatingActionButton(
+    tooltip: 'Add',
+    child: Icon(Icons.add),
+  );
 }
 </code></pre>
                 

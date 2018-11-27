@@ -551,28 +551,30 @@
 <li>
 <p>Click <strong>Install SDK</strong> and select a folder to store the Flutter SDK files.</p>
 <blockquote>
-<p>Alternatively, you can install the SDK from the official Flutter <a href="https://flutter.io/docs/get-started/install">website</a>.</p>
+<p>Alternatively, you can install the SDK from the official Flutter <a href="https://flutter.io/docs/get-started/install">website</a>. In this case, you will need to specify the path to the Flutter SDK folder on this page.</p>
 </blockquote>
-<p>After the SDK is installed, click <strong>Next</strong>.
-5. Specify the project name.</p>
+<p>After the SDK is installed, click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Specify the project name.</p>
 <blockquote>
 <p>The project name should be in lower case and cannot contain spaces and any special character but underscores.</p>
 </blockquote>
-<p>On the same page, you may also change the path to your application and specify the organisation name if a project is going to be published. You may also select a programming language, which will be used in Android and iOS modules of the project. For our first app, we will leave the default settings.</p>
+<p>On the same page, you may also change the project type, the path to your application and specify the organisation name if the project is going to be published. You may also select a programming language, which will be used in Android and iOS modules of the project. For our app, we will leave the default settings.</p>
 </li>
 <li>
 <p>Click <strong>Finish</strong> and wait until the project is created.</p>
 </li>
 <li><a href="../run_app/">Run</a> the demo application that has been created by default in the <strong>lib/main.dart</strong> file. Try to use the <a href="../hot_reload/">hot reload</a> function with the demo app.</li>
-<li>Delete all content of <strong>lib/main.dart</strong>, so we can add a code of our first app from scratches.</li>
+<li>Delete all content of <strong>lib/main.dart</strong>, so we can add a code of our first app from scratch.</li>
 </ol>
 <h2 id="step-2-import-packages">Step 2. Import packages</h2>
-<p>In our app, we will use Flutter material design widgets from the <a href="https://docs.flutter.io/flutter/material/material-library.html">material</a> library. To use the library, add the following string:</p>
+<p>In our app, we will use Flutter material design widgets from the <a href="https://docs.flutter.io/flutter/material/material-library.html">material</a> library. To use the library, add the following string in <strong>main.dart</strong>:</p>
 <pre><code>import 'package:flutter/material.dart';
 </code></pre>
-<p>We also need to import an external package <a href="https://pub.dartlang.org/packages/random_color">random_color</a>, which will be used for random color generation.</p>
+<p>We also need to import an external package <a href="https://pub.dartlang.org/packages/random_color">random_color</a>, which will be used for the random color generation.</p>
 <blockquote>
-<p>Find more usful packages on the <a href="https://pub.dartlang.org/flutter/">Flutter Packages website</a>.</p>
+<p>Find more useful packages on the <a href="https://pub.dartlang.org/flutter/">Flutter Packages website</a>.</p>
 </blockquote>
 <p>To import an external package,</p>
 <ol>
@@ -586,9 +588,9 @@ random_color: ^1.0.3
 </code></pre>
 </li>
 <li>
-<p>Pull the package into your project by clicking <strong>Get Packages</strong> from the top right corner of the code editor when <strong>pubsec.yaml</strong> is open, or select <strong>Toos</strong> &gt; <strong>Flutter</strong> &gt; <strong>Packages Get</strong> from the main menu.</p>
+<p>Pull the package into your project by clicking <strong>Packages Get</strong> from the <strong>Flutter Commands</strong> toolbar when the <strong>pubsec.yaml</strong> is open, or select <strong>Toos</strong> &gt; <strong>Flutter</strong> &gt; <strong>Packages Get</strong> from the main menu.</p>
 </li>
-<li>Import the package in <strong>main.dart</strong>:<pre><code>import 'package:random_color/random_color.dart'
+<li>Import the package in <strong>main.dart</strong>:<pre><code>import 'package:random_color/random_color.dart';
 </code></pre>
 </li>
 </ol>
@@ -600,21 +602,24 @@ random_color: ^1.0.3
 <pre><code>  class  extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+      return Container();
     }
   }
 </code></pre>
 <p>Add the name of the class:</p>
-<pre><code>  class RandomColors extends StatelessWidget {
+<pre><code>  class RandomColorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+      return Container();
     }
   }
 </code></pre>
+<blockquote>
+<p>You can use the <strong>Reformat Code with dartfmt</strong> command of the code editor context menu to correct the formatting of your code, which may be skewed after pasting code snippets.</p>
+</blockquote>
 </li>
 <li>
-<p>Every widget provides the <strong>build()</strong> method, which returns lower level widgets. Our <strong>build()</strong> method will return the <a href="https://docs.flutter.io/flutter/material/MaterialApp-class.html">MaterialApp</a> widget, which will serve as a container for material design widgets that we will add later:</p>
+<p>Every widget provides the <a href="https://docs.flutter.io/flutter/widgets/State/build.html">build()</a> method, which returns lower level widgets. Our <strong>build()</strong> method will return the <a href="https://docs.flutter.io/flutter/material/MaterialApp-class.html">MaterialApp</a> widget, which will serve as a container for material design widgets that we will add later:</p>
 <pre><code>class RandomColorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -649,13 +654,13 @@ class _State extends State&lt;&gt; {
   }
 }
 </code></pre>
-<p>Rename the created classes: </p>
+<p>Rename the created classes. To do this, just type the name of the <strong>StatefulWidget</strong> sublass (<strong>RandomColorHomePage</strong>), all related classes will be renamed automatically.</p>
 <pre><code>class RandomColorHomePage extends StatefulWidget {
   @override
-  State createState() =&gt; RandomColorHomePageState();
+  _RandomColorHomePageState createState() =&gt; _RandomColorHomePageState();
 }
 
-class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+class _RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
   @override
   Widget build(BuildContext context) {
     return Container();
@@ -668,14 +673,17 @@ class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
 <pre><code>class RandomColorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: RandomColorHomePage());
+    return MaterialApp(
+      title: 'Random Color App',
+      home: RandomColorHomePage()
+    );
   }
 }
 </code></pre>
 </li>
 <li>
-<p>Add the <strong>setState()</strong> method for the <strong>RandomColorHomePageState</strong> class. This method will generate a random color using external package <strong>random_color</strong> imported in Step 2.</p>
-<pre><code>class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+<p>Declare the <strong>_currentColor</strong> variable, which will contain a current color value, and override the <strong>setState()</strong> method in the <strong>_RandomColorHomePageState</strong> class. This method will generate a random color using external package <strong>random_color</strong> imported in Step 2.</p>
+<pre><code>class _RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
   Color _currentColor = RandomColor().randomColor();
 
   @override
@@ -692,8 +700,9 @@ class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
 </code></pre>
 </li>
 <li>
-<p>In the <strong>build()</strong> method of the <strong>RandomColorHomePageState</strong> class, add the <a href="https://docs.flutter.io/flutter/material/Scaffold-class.html">Scaffold</a> widget containing <a href="https://docs.flutter.io/flutter/material/AppBar-class.html">AppBar</a>, <a href="https://docs.flutter.io/flutter/widgets/Text-class.html">Text</a> in the center of the screen and <a href="https://docs.flutter.io/flutter/material/FloatingActionButton-class.html">FloatingActionButton</a>:</p>
-<pre><code>class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+<p>In the <strong>build()</strong> method of the <strong>_RandomColorHomePageState</strong> class, replace the default <strong>Container</strong> widget with the <a href="https://docs.flutter.io/flutter/material/Scaffold-class.html">Scaffold</a> widget containing <a href="https://docs.flutter.io/flutter/material/AppBar-class.html">AppBar</a>, <a href="https://docs.flutter.io/flutter/widgets/Text-class.html">Text</a> in the center of the screen and <a href="https://docs.flutter.io/flutter/material/FloatingActionButton-class.html">FloatingActionButton</a>:</p>
+<pre><code>class _RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
+  (…)
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -722,7 +731,7 @@ class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
 <p>On tapping the floating button, our app will change the color of its widgets and display the name of the current color in the center of the screen.</p>
 <ol>
 <li>
-<p>To generate the current color value every time when the button is tapped, set the <strong>setState()</strong> method as a value of the <strong>onPressed</strong> property of the <strong>FloatingActionButton</strong> widget:</p>
+<p>To generate the current color value every time the button is tapped, add the call of the <strong>setState()</strong> method as a value of the <strong>onPressed</strong> property of <strong>FloatingActionButton</strong>:</p>
 <pre><code>  floatingActionButton: FloatingActionButton(
     onPressed: () {
      setState(() {});
@@ -757,7 +766,7 @@ class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
 <blockquote>
 <p>You can use <a href="../flutter_outline/">Flutter Outline</a> to wrap a widget with column automatically. To do this, select a widget in the <strong>Flutter Outline</strong> window and run the <strong>Wrap with Column</strong> command from toolbar or context menu.</p>
 </blockquote>
-<p>Additionally, format text size and color and center the text vertically by using the <strong>mainAxisAlignment</strong> property of the <strong>Column</strong> widget:</p>
+<p>Additionally, format text size and color, and center the text vertically by using the <strong>mainAxisAlignment</strong> property of the <strong>Column</strong> widget:</p>
 <pre><code>  body: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -793,7 +802,7 @@ class RandomColorHomePageState extends State&lt;RandomColorHomePage&gt; {
 </ul>
 <h2 id="tips">Tips</h2>
 <ul>
-<li>Use the <strong>Reformat Code with dartfmt</strong> command of the code editor context menu to correct the formatting of your code, which may be skewed after pasting code snippets.</li>
+<li>Use the <strong>Reformat Code with dartfmt</strong> command of the code editor context menu to correct the formatting of your code.</li>
 <li>Use the <a href="../dart_analysis/">Dart Analysis</a> window to review the errors which may appear when editing the code.</li>
 <li>Use <a href="../flutter_outline/">Flutter Outline</a> to easily navigate through the widgets tree, change widgets hierarchy, edit widgets layout, etc.</li>
 <li>Use <a href="../flutter_inspector/">Flutter Inspector</a> to explore the widgets hierarchy and debug possible layout issues.</li>
