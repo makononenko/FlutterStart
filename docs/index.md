@@ -4,7 +4,7 @@ You will learn how to:
 
 - [install the Flutter  and Dart plugins](install.md) for IntelliJ IDEA
 - [create](create_app.md) a simple Flutter application and [run](run_app.md) it on Android device
-- use different Flutter pulgin [tools and functions](tools_functions.md) to speed up and ease the development process
+- use different Flutter pulgin [tools](flutter_tools.md) to speed up and ease the development process
 
 ## What is Flutter? ##
 Flutter is a mobile UI framework for creating native applications on Android and iOS. Flutter uses Dart as a programming language.
